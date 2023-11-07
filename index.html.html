@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+  <style>
+    @media (min-width:992px){
+        #calculator{
+            width: 25%;
+        }
+    }
+    
+  </style>
+  <script type="text/javascript">
+
+    var getResult='';
+    
+    function solution(){
+        document.getElementById("resultBox").value=getResult;
+    }
+    function getnum1(){
+       getResult+= document.getElementById("one").value;
+       solution();
+       
+    }
+    function getnum2(){
+       getResult+= document.getElementById("two").value;
+       solution();
+    }
+    function getnum3(){
+       getResult+= document.getElementById("three").value;
+       solution();
+    }
+    function getnum4(){
+       getResult+= document.getElementById("four").value;
+       solution();
+    }
+    function getnum5(){
+       getResult+= document.getElementById("five").value;
+       solution();
+    }
+    function getnum6(){
+       getResult+= document.getElementById("six").value;
+       solution();
+    }
+    function getnum7(){
+       getResult+= document.getElementById("seven").value;
+       solution();
+    }
+    function getnum8(){
+       getResult+= document.getElementById("eight").value;
+       solution();
+    }
+    function getnum9(){
+       getResult+= document.getElementById("nine").value;
+       solution();
+
+    }
+    function getnum0(){
+       getResult+= document.getElementById("zero").value;
+        solution();
+    }
+    function getnumdDot(){
+       getResult+= document.getElementById("dot").value;
+        solution();
+    }
+    function getnumdEqual(){
+       
+        document.getElementById("resultBox").value=eval(getResult);
+    }
+    function getnumdPlus(){
+       getResult+="+";
+        solution();
+    }
+    function getnumdMinus(){
+       getResult+= document.getElementById("minus").value;
+        solution();
+    }
+    function getnumdMultiply(){
+       getResult+= document.getElementById("multiply").value;
+        solution();
+    }
+    function getnumdDivide(){
+       getResult+= document.getElementById("divide").value;
+        solution();
+    }
+    function clearEntry(){
+        
+        getResult= '';
+        solution();
+    }
+   
+  </script>
+</head>
+<body >
+    <div class="container p-0 rounded-bottom bg-dark border border-dark " id="calculator">
+    <div class="card border border-dark m-3 bg-secondary-subtle">
+        <div class="card-header bg-dark">
+            <h1 class="card-title text-center text-success">Calculator</h1>
+        </div>
+        <div class="card-body ">
+            <div class="input-group mb-3">
+                <button class= "form-control btn btn-success border border-dark fw-bold py-2 w-25" onclick="clearEntry()">AC</button>
+                <!-- output displays here -->
+                <input type="text" class="form-control text-end w-75"  id="resultBox">
+            </div>
+            <!-- row1 -->
+            <div class="row my-1">
+                <div class="col-9 ">
+                    <button id="seven" value="7" class="bg-dark text-light  py-2 rounded w-25" onclick="getnum7()">7</button>
+                    <button id="eight" value="8" class="bg-dark text-light  py-2 rounded w-25" onclick="getnum8()">8</button>
+                    <button id="nine" value="9" class="bg-dark text-light  py-2 rounded w-25" onclick="getnum9()">9</button>
+                </div>
+                <div class="col-3">
+                    <button id="plus" value="+"  class="btn btn-success border border-dark rounded w-100 py-2" onclick="getnumdPlus()">+</button>
+                </div>
+            </div>
+             <!-- row1 -->
+             <div class="row my-1">
+                <div class="col-9 ">
+                    <button id="four" value="4" class="bg-dark text-light  py-2 rounded w-25" onclick="getnum4()">4</button>
+                    <button id="five" value="5" class="bg-dark text-light  py-2 rounded w-25" onclick="getnum5()">5</button>
+                    <button id="six" value="6" class="bg-dark text-light  py-2 rounded w-25" onclick="getnum6()">6</button>
+                </div>
+                <div class="col-3">
+                    <button id="minus" value="-"  class="btn btn-success border border-dark rounded w-100 py-2" onclick="getnumdMinus()">-</button>
+                </div>
+            </div>
+             <!-- row1 -->
+             <div class="row my-1">
+                <div class="col-9 ">
+                    <button id="one" value="1" class="bg-dark text-light  py-2 rounded w-25" onclick="getnum1()">1</button>
+                    <button id="two" value="2" class="bg-dark text-light  py-2 rounded w-25" onclick="getnum2()">2</button>
+                    <button id="three" value="3" class="bg-dark text-light  py-2 rounded w-25" onclick="getnum3()">3</button>
+                </div>
+                <div class="col-3">
+                    <button id="multiply" value="*"  class="btn btn-success border border-dark rounded w-100 py-2" onclick="getnumdMultiply()">*</button>
+                </div>
+            </div>
+             <!-- row1 -->
+             <div class="row my-1">
+                <div class="col-9 ">
+                    <button id="zero" value="0" class="bg-dark text-light  py-2 rounded w-25" onclick="getnum0()">0</button>
+                    <button id="dot" value="." class="bg-dark text-light  py-2 rounded w-25" onclick="getnumdDot()">.</button>
+                    <button id="equal" value="=" class="btn btn-success border border-dark py-2 rounded w-25" onclick="getnumdEqual()">=</button>
+                </div>
+                <div class="col-3">
+                    <button id="divide" value="/"  class="btn btn-success border border-dark rounded w-100 py-2" onclick="getnumdDivide()">/</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
